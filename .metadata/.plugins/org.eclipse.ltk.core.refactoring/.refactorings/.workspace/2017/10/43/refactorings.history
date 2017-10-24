@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 16 resources" deleteContents="false" description="Delete 16 resources" element1="/algorithm_test" element10="/netmable_ex1" element11="/netmable_ex3" element12="/netmable_ex4" element13="/netmable_ex6" element14="/nexon_ex1" element15="/nexon_ex5" element16="/rodCutting" element2="/baekjun_1260" element3="/baekjun_1931" element4="/baekjun_2156" element5="/beakjun" element6="/beakjun_11052" element7="/beakjun_11726" element8="/beakjun_1463" element9="/codeground_frogjump" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="16" stamp="1508862503617"/>
+</session>
