@@ -1,14 +1,2 @@
-# �HoYoung Kim's Alogo. exercise book
-
-
-This dir is hoyoung's algorithm note
-
-
-This note is just for practice.
-
-
-It doesn't matter if you refer to it.
-but may not be the good answer.
-
-
-haha..
+# 알고리즘 공부 노트장
+본 저장소의 알고리즘 해답은 정답일 수도 있고 아닐 수도 있습니다.
