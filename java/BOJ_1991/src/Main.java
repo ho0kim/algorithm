@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 //BOJ_1991
@@ -25,16 +24,21 @@ DBEGFCA
 public class Main {
 
 	public static void main(String[] args) {
-		sol_using_node();
+		sol_using_arr();
+//		sol_using_node();
 	}
 	
+
+// Solution use array
 	static int Aascii = 'A';
 	
 	public static void sol_using_arr() {
 		Scanner sc = new Scanner(System.in);
 		//node 갯수받
 		int nodeCnt = sc.nextInt();
+		//버퍼에 있는 enter 제
 		sc.nextLine();
+		
 		int[][] tree = new int[nodeCnt][2];
 		
 		for(int i =0 ; i<nodeCnt;i++) {
@@ -79,10 +83,11 @@ public class Main {
 	}
 	
 ////////////////////////////////////////////////////////////////////
-// Use tree node
+//Solution Use tree node
 	public static void sol_using_node() {
 		Scanner sc = new Scanner(System.in);
 		int nodeCnt = sc.nextInt();
+		//버퍼에 있는 enter 제
 		sc.nextLine();
 		
 		Tree tree = new Tree();
@@ -96,6 +101,7 @@ public class Main {
 			
 			tree.add(nodeData, leftData, rightData);
 		}
+		sc.close();
 		
 		tree.preorder(tree.root);
 		System.out.println();
