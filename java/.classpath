@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="baekjun_1260/src"/>
+	<classpathentry kind="src" path="baekjun_1931/src"/>
+	<classpathentry kind="src" path="baekjun_2156/src"/>
+	<classpathentry kind="src" path="beakjun_11052/src"/>
+	<classpathentry kind="src" path="beakjun_11726/src"/>
+	<classpathentry kind="src" path="beakjun_1463/src"/>
+	<classpathentry kind="src" path="codeground_frogjump/src"/>
+	<classpathentry kind="src" path="rodCutting/src"/>
+	<classpathentry kind="src" path="nhn_test_01"/>
+	<classpathentry kind="output" path="baekjun_1260/bin"/>
+</classpath>
