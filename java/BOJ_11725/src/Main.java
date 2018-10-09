@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+import java.util.Stack;
 
 /*
 input
@@ -15,22 +16,6 @@ input
 output
 4 6 1 3 1 4 
  */
-
-/*
- 12
-1 2
-1 3
-2 4
-3 5
-3 6
-4 7
-4 8
-5 9
-5 10
-6 11
-6 12
- */
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -50,7 +35,7 @@ public class Main {
 		
 		sc.close();
 		
-		parentNodes = graph.searchParent(1);
+		parentNodes = graph.searchParent_dfs(1);
 		
 		for(int i = 2; i<=nodeCnt; i++){
 			System.out.print(parentNodes[i] + " ");
@@ -60,6 +45,8 @@ public class Main {
 }
 
 class Graph{
+	//node 인접한노드들 linkedlist에 저장
+	//방문확인을 위한 mark
 	class Node{
 		int data;
 		LinkedList<Node> adjacentNodes;
@@ -90,7 +77,7 @@ class Graph{
 			m.adjacentNodes.add(n);
 	}
 	
-	static int[] searchParent(int start) {
+	static int[] searchParent_bfs(int start) {
 		Queue<Node> q = new LinkedList<>();
 		int[] parents = new int[nodes.length + 1];
 		
@@ -104,7 +91,6 @@ class Graph{
 				if(!n.marked) {
 					q.offer(n);
 					n.marked = true;
-					System.out.println(n.data + "   " + dequeueNode.data);
 					parents[n.data] = dequeueNode.data; 
 				}
 			}
@@ -112,4 +98,24 @@ class Graph{
 		return parents;
 	}
 	
+	static int[] searchParent_dfs(int start) {
+		Stack<Node> stack = new Stack<>();
+		int[] parents = new int[nodes.length + 1];
+		Node startNode = nodes[start];
+		stack.push(startNode);
+		startNode.marked = true;
+		
+		while(!stack.isEmpty()) {
+			Node popNode = stack.pop();
+			for(Node n : popNode.adjacentNodes) {
+				if(!n.marked) {
+					stack.push(n);
+					n.marked = true;
+					parents[n.data] = popNode.data;
+				}
+			}
+		}
+		
+		return parents;
+	}
 }
