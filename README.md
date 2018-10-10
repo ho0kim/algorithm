@@ -32,6 +32,6 @@ parents array에 각 노드의 parent 데이터를 넣어주면된다
 
 순회는 bfs, dfs 아무거나 해도 상관없지만 개인적으로 bfs를 좋아해 bfs로 풀었다.
 
-+ DFS풀이 추가. 
-bfs와 비슷. 
++DFS풀이 추가.  
+bfs와 비슷.  
 node가 pop되고 자식 노드들을 push할 때 해당 node들의 parent를 pop되어있는 node로 넣어주면 된다.  
