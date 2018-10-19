@@ -32,8 +32,6 @@ public class Main {
 		for(int i = 0;i<14;i++) {
 			answer += q.poll();
 		}
-		
-        
         return answer;
     }
 }

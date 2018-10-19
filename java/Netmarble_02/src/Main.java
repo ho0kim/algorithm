@@ -26,7 +26,7 @@ public class Main {
     	}
      
     	for(int i = 0; i<words.length;i++) {
-    		System.out.println(answer[i]+1);
+    		answer[i] = answer[i]+1;
     	}
         return answer;
     }
